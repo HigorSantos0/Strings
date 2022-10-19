@@ -37,17 +37,16 @@ int stringpalindromo(char string1[])
 	
 	quant = strlen(string1);
 	
-	for(i = 0, j = quant - 1; i < j; j--, i++)
+	for(i = quant - 1, j = 0; i >= 0; i--, j++)
 	{
-		if(string1[i] != string1[j])
-		{
-			return 1;
-		}
+		 stringContr[j] = string1[i]; 
 	}
 	
+	iguais = strcmpi (string1, stringContr);
 	
-	
-	return 0;
+	return iguais;
 	
 }
+
+
 
